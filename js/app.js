@@ -152,13 +152,19 @@ function makeBuddies() {
   console.log("5: makeBuddies");
 
   // create an `aside` tag
+  const buddiesAside = document.createElement('aside')
 
   // put an `unordered list` of the `'buddies'` in the aside
-
+  const buddiesContainer = document.createElement('ul')
+  for(let buddy of buddies){
+  const buddiesEl = document.createElement('li')
+  buddiesContainer.appendChild(buddiesEl)
+  buddiesAside.appendChild(buddiesContainer)
+  buddiesEl.innerHTML = buddies;
+  }
   // insert your aside as a child element of `rivendell`
-
+  document.getElementById('rivendell').appendChild(buddiesAside)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
