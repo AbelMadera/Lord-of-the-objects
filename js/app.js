@@ -76,6 +76,18 @@ function makeHobbits() {
 
   // hint: get 'The-Shire' by using its id
 
+const hobbitsContainer = document.createElement('ul')
+
+for(let hobbit of hobbits){
+  const hobbitEl = document.createElement('li')
+  hobbitEl.innerHTML = hobbit;
+  hobbitEl.classList.add('hobbit')
+  hobbitsContainer.appendChild(hobbitEl)
+}
+
+document.getElementById('the-shire').appendChild(hobbitsContainer)
+
+
 }
 
 // COMMIT YOUR WORK
