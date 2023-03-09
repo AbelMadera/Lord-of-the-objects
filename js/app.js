@@ -38,21 +38,19 @@ function makeMiddleEarth() {
   console.log("1: makeMiddleEarth");
 
   // 1. create a section tag with an id of middle-earth
-  const middleEarthSection = document.createElement('section')
-  middleEarthSection.setAttribute('id', 'middle-earth')
+  
   // 2. use a for loop to iterate over the lands array that does the following:
-  lands.forEach((land) => {
+
   //   2a. creates an article tag (there should be one for each land when the loop is done)
-  const landArticle = document.createElement('article')
+
   //   2b. gives each land article an `id` tag of the corresponding land name
-  landArticle.setAttribute('id', land.toLocaleLowerCase())
+
   //   2c. includes an h1 with the name of the land inside each land article
-  landArticle.innerHTML = `<h1>${land}</h1>`
+  
   //   2d. appends each land to the middle-earth section
-  middleEarthSection.appendChild(landArticle)
-  })
+  
   // 3. append the section to the body of the DOM.
-document.querySelector('body').appendChild(middleEarthSection)
+
 }
 
 
@@ -75,19 +73,6 @@ function makeHobbits() {
   // hint: create a 'ul' outside the loop into which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-
-const hobbitsContainer = document.createElement('ul')
-
-for(let hobbit of hobbits){
-  const hobbitEl = document.createElement('li')
-  hobbitEl.innerHTML = hobbit;
-  hobbitEl.classList.add('hobbit')
-  hobbitsContainer.appendChild(hobbitEl)
-}
-
-document.getElementById('the-shire').appendChild(hobbitsContainer)
-
-
 }
 
 // COMMIT YOUR WORK
@@ -102,13 +87,11 @@ function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
 
   // create a div with an id of `'the-ring'`
-  const divEl = document.createElement('div')
-  divEl.setAttribute('id', 'the-ring')
 
   // give the div a class of `'magic-imbued-jewelry'`
-  divEl.classList.add('magic-imbued-jewelry')
+
   // add the ring as a child of `Frodo`
-  document.querySelectorAll('.hobbit')[0].appendChild(divEl)
+
 }
 
 // COMMIT YOUR WORK
@@ -123,16 +106,6 @@ function makeBaddies() {
   console.log("4: makeBaddies");
 
   // display an unordered list of baddies in Mordor
-  const baddiesContainer = document.createElement('ul')
-
-  for(let i = 0; i < baddies.length; i++){
-    const baddieEl = document.createElement('li')
-    baddieEl.classList.add('baddy')
-    baddieEl.innerText = baddies[i]
-    baddiesContainer.appendChild(baddieEl)
-  }
-
-document.getElementById('mordor').appendChild(baddiesContainer)
 
   // give each of the baddies a class of "baddy"
 
@@ -152,18 +125,11 @@ function makeBuddies() {
   console.log("5: makeBuddies");
 
   // create an `aside` tag
-  const buddiesAside = document.createElement('aside')
 
   // put an `unordered list` of the `'buddies'` in the aside
-  const buddiesContainer = document.createElement('ul')
-  for(let buddy of buddies){
-  const buddiesEl = document.createElement('li')
-  buddiesContainer.appendChild(buddiesEl)
-  buddiesAside.appendChild(buddiesContainer)
-  buddiesEl.innerHTML = buddies;
-  }
+
   // insert your aside as a child element of `rivendell`
-  document.getElementById('rivendell').appendChild(buddiesAside)
+
 }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -177,6 +143,7 @@ function leaveTheShire() {
   console.log("6: leaveTheShire");
 
   // assemble the `hobbits` and move them to `rivendell`
+
 }
 
 // COMMIT YOUR WORK
